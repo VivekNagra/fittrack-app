@@ -3,7 +3,7 @@
 
 FitTrack is a full-stack health & fitness tracking application that allows users to log and view their workouts, meals, and sleep. It demonstrates polyglot persistence using PostgreSQL for structured data and MongoDB for unstructured data (sleep logs).
 
-## Technologies Used
+## Tech Stack
 
 - **Frontend**: React, Tailwind CSS
 - **Backend**: Java Spring Boot
