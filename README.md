@@ -77,25 +77,8 @@ npm run dev
 
 ```
 FitTrack/
-│
-├── backend/            # Spring Boot App
-│   ├── controller/
-│   ├── model/
-│   ├── repository/
-│   └── ...
-│
-├── frontend/           # React App
-│   ├── src/
-│   │   ├── features/
-│   │   │   ├── users/
-│   │   │   ├── workouts/
-│   │   │   ├── meals/
-│   │   │   └── sleeplogs/
-│   │   └── App.jsx
-│   └── ...
-│
-└── README.md
-```
+backend/ # (Java Spring Boot App)
+frontend/ (React App)
 
 ---
 
