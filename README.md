@@ -1,5 +1,5 @@
 
-# FitTrack 🏋
+# FitTrack 
 
 FitTrack is a full-stack health & fitness tracking application that allows users to log and view their workouts, meals, and sleep. It demonstrates polyglot persistence using PostgreSQL for structured data and MongoDB for unstructured data (sleep logs).
 
