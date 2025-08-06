@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import WorkoutsTable from "../workouts/WorkoutsTable";
 import MealsTable from "../meals/MealsTable";
+import SleepLogsTable from "../sleeplogs/SleepLogsTable";
+import SleepLogForm from "../sleeplogs/SleepLogForm";
 
 function UsersTable() {
   const [users, setUsers] = useState([]);
@@ -8,6 +10,8 @@ function UsersTable() {
   const [editingUserId, setEditingUserId] = useState(null);
   const [visibleWorkouts, setVisibleWorkouts] = useState({});
   const [visibleMeals, setVisibleMeals] = useState({});
+  const [visibleSleepLogs, setVisibleSleepLogs] = useState({});
+  const [refreshSleepLogs, setRefreshSleepLogs] = useState(0);
 
   const fetchUsers = () => {
     fetch("http://localhost:8080/api/users")
@@ -71,6 +75,13 @@ function UsersTable() {
     }));
   };
 
+  const toggleSleepLogs = (userId) => {
+    setVisibleSleepLogs((prev) => ({
+      ...prev,
+      [userId]: !prev[userId],
+    }));
+  };
+
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">👤 Users</h2>
@@ -115,6 +126,12 @@ function UsersTable() {
                   >
                     {visibleMeals[user.userId] ? "Hide" : "Show"} Meals
                   </button>
+                  <button
+                    className="px-2 py-1 bg-indigo-500 text-white rounded"
+                    onClick={() => toggleSleepLogs(user.userId)}
+                  >
+                    {visibleSleepLogs[user.userId] ? "Hide" : "Show"} Sleep Logs
+                  </button>
                 </td>
               </tr>
               {visibleWorkouts[user.userId] && (
@@ -128,6 +145,19 @@ function UsersTable() {
                 <tr>
                   <td colSpan="4">
                     <MealsTable userId={user.userId} />
+                  </td>
+                </tr>
+              )}
+              {visibleSleepLogs[user.userId] && (
+                <tr key={`sleep-${user.userId}-${refreshSleepLogs}`}>
+                  <td colSpan="4">
+                    <SleepLogsTable userId={user.userId} />
+                    <SleepLogForm
+                      userId={user.userId}
+                      onSleepLogCreated={() =>
+                        setRefreshSleepLogs((prev) => prev + 1)
+                      }
+                    />
                   </td>
                 </tr>
               )}
