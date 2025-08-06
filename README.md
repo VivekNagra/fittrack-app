@@ -31,7 +31,7 @@ FitTrack is a full-stack health & fitness tracking application that allows users
 - Runs on `localhost`
 - Reproducible with MongoDB running locally
 - Clean modular folder structure
-- Fully testable via browser or Postman
+- Fully testable via browser 
 - Real-time updates on creation and deletion of data
 - Uses RESTful APIs
 
