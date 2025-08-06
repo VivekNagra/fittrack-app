@@ -44,7 +44,7 @@ FitTrack is a full-stack health & fitness tracking application that allows users
 Make sure the following are installed:
 
 - Node.js
-- Java 17+
+- Java 17
 - PostgreSQL (running locally)
 - MongoDB (installed and running via Homebrew on macOS)
 - Maven
@@ -53,18 +53,18 @@ Make sure the following are installed:
 
 ## Running the Project
 
-### 1. Start MongoDB (macOS)
+### Start MongoDB (macOS)
 ```bash
 brew services start mongodb/brew/mongodb-community@7.0
 ```
 
-### 2. Backend (Spring Boot)
+### Backend (Spring Boot)
 ```bash
 cd backend
 ./mvnw spring-boot:run
 ```
 
-### 3. Frontend (React)
+### Frontend (React)
 ```bash
 cd frontend
 npm install
@@ -88,7 +88,7 @@ frontend/ (React App)
 
 ---
 
-## 🔍 Database
+## Database
 
 ### PostgreSQL
 
