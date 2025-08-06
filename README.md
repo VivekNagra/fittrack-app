@@ -12,7 +12,7 @@ FitTrack is a full-stack health & fitness tracking application that allows users
   - MongoDB (Sleep Logs)
 - **Other Tools**: MongoDB Compass, IntelliJ, VS Code
 
----
+
 
 ## Functional Requirements
 
@@ -24,7 +24,7 @@ FitTrack is a full-stack health & fitness tracking application that allows users
 - Each log is linked to a user
 - Admin (optional) can see all data
 
----
+
 
 ## Non-Functional Requirements
 
@@ -35,7 +35,6 @@ FitTrack is a full-stack health & fitness tracking application that allows users
 - Real-time updates on creation and deletion of data
 - Uses RESTful APIs
 
----
 
 ## Getting Started
 
@@ -49,7 +48,6 @@ Make sure the following are installed:
 - MongoDB (installed and running via Homebrew on macOS)
 - Maven
 
----
 
 ## Running the Project
 
@@ -71,7 +69,7 @@ npm install
 npm run dev
 ```
 
----
+
 
 ## Project Structure
 
@@ -80,7 +78,7 @@ FitTrack/
 backend/ # (Java Spring Boot App)
 frontend/ (React App)
 
----
+
 ## Database
 
 ### PostgreSQL
@@ -105,17 +103,6 @@ use fittrack
 db.sleep_logs.find()
 ```
 
----
-
-## Exam Requirements Checklist
-
-- [x] Functional + Non-functional requirements defined
-- [x] Multiple CRUD entities
-- [x] Two types of databases used (PostgreSQL + MongoDB)
-- [x] Complete working frontend and backend
-- [x] GitHub repo: [https://github.com/VivekNagra/fittrack-app](https://github.com/VivekNagra/fittrack-app)
-
----
 
 ## Author
 
