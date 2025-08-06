@@ -81,13 +81,6 @@ backend/ # (Java Spring Boot App)
 frontend/ (React App)
 
 ---
-
-## Screenshots
-
-> You can include example screenshots of the UI here (Users table, Meals, Workouts, SleepLogs etc.)
-
----
-
 ## Database
 
 ### PostgreSQL
