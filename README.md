@@ -98,6 +98,7 @@ Stores:
 - Sleep Logs
 
 Use MongoDB Compass or CLI to inspect:
+If using compass use this adress: (mongodb://)localhost:27017
 ```bash
 mongo
 use fittrack
