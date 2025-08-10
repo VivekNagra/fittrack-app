@@ -1,112 +1,101 @@
+# FitTrack – Health & Fitness Tracker
 
-# FitTrack 
+## Formål
+Dette projekt er udviklet som eksamensaflevering i faget **Databaser** på Professionsbacheloruddannelsen i Softwareudvikling.  
+Formålet er at demonstrere anvendelsen af *polyglot persistence* ved at integrere to forskellige databaser i samme applikation: en relationel PostgreSQL-database til strukturerede data og en dokumentbaseret MongoDB-database til ustrukturerede data.  
 
-FitTrack is a full-stack health & fitness tracking application that allows users to log and view their workouts, meals, and sleep. It demonstrates polyglot persistence using PostgreSQL for structured data and MongoDB for unstructured data (sleep logs).
+Projektet er udarbejdet som **reeksamen** og er derfor udviklet individuelt, selvom opgaven oprindeligt er tiltænkt en gruppe på tre studerende.
 
-## Tech Stack
+---
 
-- **Frontend**: React, Tailwind CSS
-- **Backend**: Java Spring Boot
-- **Databases**:
-  - PostgreSQL (Workouts, Meals, Users)
-  - MongoDB (Sleep Logs)
-- **Other Tools**: MongoDB Compass, IntelliJ, VS Code
+## Funktionalitet
+- CRUD-operationer (Create, Read, Update, Delete) for:
+  - Brugere
+  - Træningspas
+  - Måltider
+  - Søvndata
+- Dashboard-visning med samlet overblik.
+- Integration mellem PostgreSQL og MongoDB uden forskel for brugeren.
+- Responsiv frontend udviklet i React.
+- Backend med REST API bygget i Java Spring Boot.
 
+---
 
+## Teknologistak
+- **Frontend:** React, Tailwind CSS  
+- **Backend:** Java Spring Boot  
+- **Databaser:** PostgreSQL (relationel), MongoDB (dokumentbaseret)  
+- **Værktøjer:** pgAdmin, MongoDB Compass  
+- **Miljø:** Lokalt på MacOS  
 
-## Functional Requirements
+---
 
-- Users can log **Workouts** (type, duration, calories burned)
-- Users can log **Meals** (type, calories, protein, carbs, fat)
-- Users can log **Sleep Logs** (hours, quality, notes, date)
-- Users can **edit** and **delete** all logs
-- Users can **view logs** related to them
-- Each log is linked to a user
-- Admin (optional) can see all data
+## Krav
+- Applikationen skal kunne køre lokalt uden internet.
+- Koden skal være versioneret i GitHub.
+- To databaser skal være integreret i samme applikation.
+- Brugervenlig, enkel grænseflade.
+- CRUD understøttet for alle datatyper.
 
+---
 
+## Installation og kørsel
 
-## Non-Functional Requirements
-
-- Runs on `localhost`
-- Reproducible with MongoDB running locally
-- Clean modular folder structure
-- Fully testable via browser 
-- Real-time updates on creation and deletion of data
-- Uses RESTful APIs
-
-
-## Getting Started
-
-### Prerequisites
-
-Make sure the following are installed:
-
-- Node.js
-- Java 17
-- PostgreSQL (running locally)
-- MongoDB (installed and running via Homebrew on macOS)
-- Maven
-
-
-## Running the Project
-
-### Start MongoDB (macOS)
+### 1. Klon repository
 ```bash
-brew services start mongodb/brew/mongodb-community@7.0
+git clone https://github.com/VivekNagra/fittrack-app.git
+cd fittrack-app
 ```
 
-### Backend (Spring Boot)
+---
+
+### 2. Opsætning af databaser
+
+#### PostgreSQL
+1. Opret en ny database i pgAdmin med navnet `fittrack`.
+2. Kør de SQL-scripts, der findes i mappen `/backend/sql/` for at oprette tabellerne.
+3. Indstil forbindelse i `application.properties` (backend).
+
+#### MongoDB
+1. Start MongoDB lokalt (eller brug MongoDB Atlas).
+2. Opret en database med navnet `fittrack`.
+3. Indsæt eventuelt eksempeldokumenter for `sleep_logs`.
+
+---
+
+### 3. Start backend
 ```bash
 cd backend
-./mvnw spring-boot:run
+mvn spring-boot:run
 ```
+Backend kører som standard på `http://localhost:8080`.
 
-### Frontend (React)
+---
+
+### 4. Start frontend
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
+Frontend kører som standard på `http://localhost:5173`.
 
+---
 
+## Brug
+- Åbn frontend-URL’en i din browser.
+- Opret en bruger, og registrer derefter træningspas, måltider og søvnlogs.
+- Data opbevares i henholdsvis PostgreSQL og MongoDB, men præsenteres samlet i interfacet.
 
-## Project Structure
+---
 
-```
-FitTrack/
-backend/ # (Java Spring Boot App)
-frontend/ (React App)
+## Testværktøjer
+- **pgAdmin** til inspektion af PostgreSQL-data.  
+- **MongoDB Compass** til visning af `sleep_logs`.  
 
+---
 
-## Database
-
-### PostgreSQL
-
-Stores:
-- Users
-- Workouts
-- Meals
-
-Use pgAdmin to inspect.
-
-### MongoDB
-
-Stores:
-- Sleep Logs
-
-Use MongoDB Compass or CLI to inspect:
-If using compass use this adress: (mongodb://)localhost:27017
-```bash
-mongo
-use fittrack
-db.sleep_logs.find()
-```
-
-
-## Author
-
+## Forfatter
 **Vivek Singh Nagra**  
-Databaser Exam Project – Softwareudvikling, CphBusiness  
-Summer 2025
-
+Professionsbachelor i Softwareudvikling  
+Reeksamen – Databaser
