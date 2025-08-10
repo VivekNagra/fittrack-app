@@ -1,7 +1,7 @@
 # FitTrack – Health & Fitness Tracker
 
 ## Formål
-Dette projekt er udviklet som eksamensaflevering i faget **Databaser** på Professionsbacheloruddannelsen i Softwareudvikling.  
+Dette projekt er udviklet som eksamensaflevering i faget **Databaser**.
 Formålet er at demonstrere anvendelsen af *polyglot persistence* ved at integrere to forskellige databaser i samme applikation: en relationel PostgreSQL-database til strukturerede data og en dokumentbaseret MongoDB-database til ustrukturerede data.  
 
 Projektet er udarbejdet som **reeksamen** og er derfor udviklet individuelt, selvom opgaven oprindeligt er tiltænkt en gruppe på tre studerende.
@@ -16,17 +16,16 @@ Projektet er udarbejdet som **reeksamen** og er derfor udviklet individuelt, sel
   - Søvndata
 - Dashboard-visning med samlet overblik.
 - Integration mellem PostgreSQL og MongoDB uden forskel for brugeren.
-- Responsiv frontend udviklet i React.
+- Frontend udviklet i React.
 - Backend med REST API bygget i Java Spring Boot.
 
 ---
 
 ## Teknologistak
-- **Frontend:** React, Tailwind CSS  
+- **Frontend:** React 
 - **Backend:** Java Spring Boot  
 - **Databaser:** PostgreSQL (relationel), MongoDB (dokumentbaseret)  
 - **Værktøjer:** pgAdmin, MongoDB Compass  
-- **Miljø:** Lokalt på MacOS  
 
 ---
 
@@ -66,7 +65,7 @@ cd fittrack-app
 ### 3. Start backend
 ```bash
 cd backend
-mvn spring-boot:run
+kør FitTrackApplication.java
 ```
 Backend kører som standard på `http://localhost:8080`.
 
@@ -95,7 +94,5 @@ Frontend kører som standard på `http://localhost:5173`.
 
 ---
 
-## Forfatter
+
 **Vivek Singh Nagra**  
-Professionsbachelor i Softwareudvikling  
-Reeksamen – Databaser
