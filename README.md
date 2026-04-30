@@ -21,7 +21,7 @@ Projektet er udarbejdet som **reeksamen** og er derfor udviklet individuelt, sel
 
 ---
 
-## Teknologistak
+## Tech Stack
 - **Frontend:** React 
 - **Backend:** Java Spring Boot  
 - **Databaser:** PostgreSQL (relationel), MongoDB (dokumentbaseret)  
@@ -40,7 +40,7 @@ Projektet er udarbejdet som **reeksamen** og er derfor udviklet individuelt, sel
 
 ## Installation og kørsel
 
-### 1. Klon repository
+### 1. Clone Repo
 ```bash
 git clone https://github.com/VivekNagra/fittrack-app.git
 cd fittrack-app
@@ -81,7 +81,7 @@ Frontend kører som standard på `http://localhost:5173`.
 
 ---
 
-## Brug
+## Tutorial
 - Åbn frontend-URL’en i din browser.
 - Opret en bruger, og registrer derefter træningspas, måltider og søvnlogs.
 - Data opbevares i henholdsvis PostgreSQL og MongoDB, men præsenteres samlet i interfacet.
